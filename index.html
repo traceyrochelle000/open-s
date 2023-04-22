@@ -1,6 +1,9 @@
 <script>
-                var hash = window.location.hash,
-                cleanhash = hash.replace("#", ""); 
-                window.location = "https://"+cleanhash;
-                //alert(cleanhash);
-            </script>
+    const params = new URLSearchParams(window.location.search);
+    const go = params.get('go');
+
+    if (go) {
+    window.location.href = go;
+    }
+
+</script>
